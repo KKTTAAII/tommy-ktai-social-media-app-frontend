@@ -1,0 +1,140 @@
+:root {
+    --primary-color: rgb(197, 45, 194);
+    --box-shadow-color: rgb(125, 122, 122);
+}
+
+.Signup-main-container {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    height: 700px;
+    font-family: 'Roboto', sans-serif;
+}
+
+.Signup-container {
+    display: flex;
+    border: 2px black solid;
+}
+
+.Signup-container {
+    width: 50vw;
+    height: 60vh;
+}
+
+.Signup-form {
+    display: flex;
+    flex-direction: column;
+}
+
+.Signup-formBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25vw;
+    height: inherit;
+    margin-left: 25vw;
+    margin-top: 50px;
+    margin-bottom: 20px;
+}
+
+.Signup-head {
+    font-size: .9em;
+    margin-bottom: 10px;
+    font-weight: 600;
+}
+
+.Signup-second-head {
+    font-weight: 500;
+    font-size: x-small;
+    margin-bottom: 10px;
+}
+
+.Signup-link {
+    color: var(--primary-color);
+    text-decoration: none;
+}
+
+.Signup-label {
+    color: var(--box-shadow-color);
+    font-size: x-small;
+    margin-bottom: 5px;
+}
+
+.Signup-input {
+    padding: 10px;
+    border-radius: 0;
+    border: .5px solid var(--box-shadow-color);
+    height: 35px;
+    margin-bottom: 20px;
+    width:  20vw;
+    font-size: .7em;
+    box-shadow: .1px .1px .8px .2px var(--box-shadow-color);
+    -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+    -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+    box-sizing: border-box;         /* Opera/IE 8+ */
+}
+
+.Signup-input-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.Signup-input-container:focus-within .Signup-label {
+    color:  var(--primary-color);
+}
+
+.Signup-input:focus {
+    outline: none;
+    border: none;
+    border: .5px solid  var(--primary-color);
+    border-radius: 0;
+    box-shadow: none;
+    color: var(--primary-color);
+}
+
+
+.Signup-button-container {
+    display: flex;
+    margin: 0 auto;
+}
+
+.Signup-button {
+    width: 10vw;
+    height: 7vh;
+    border-radius: 0;
+    border: .5px solid;
+    background-color:  rgb(148, 130, 146);
+    color: white;
+    font-weight: 600;
+    padding: 5px;
+    margin-top: 45px;
+}
+
+.Signup-button-after-validation {
+    width: 10vw;
+    height: 7vh;
+    border-radius: 0;
+    border: .5px solid;
+    background-color: var(--primary-color);
+    color: white;
+    font-weight: 600;
+    padding: 5px;
+}
+
+.Signup-username-warning, .Signup-email-warning, .Signup-password-warning {
+    margin-top: -17px;
+    font-size: 10px;
+    margin-bottom: 10px;
+    color: red;
+    width: 20vw;
+}
+
+.Signup-password-warning {
+    margin-top: 10px;
+}
+
+.Signup-password-show {
+    width: fit-content;
+    margin-left: 17vw;
+    margin-top: -45px;
+}
