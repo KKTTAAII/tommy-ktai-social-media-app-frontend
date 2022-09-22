@@ -3,61 +3,61 @@
     --box-shadow-color: rgb(125, 122, 122);
 }
 
-.Signup-main-container {
+.Login-main-container {
     display: flex;
     align-items: center;
     justify-content: center;
     height: 700px;
 }
 
-.Signup-container {
+.Login-container {
     display: flex;
 }
 
-.Signup-decorationBox {
+.Login-decorationBox {
     width: 27vw;
     height: 420px;
 }
 
-.Signup-form {
-    display: flex;
-    flex-direction: column;
-}
-
-.Signup-formBox {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    width: 25vw;
-    height: 420px;
-    padding-top: 40px;
-}
-
-.Signup-head {
+.Login-head {
     font-size: .9em;
     margin-bottom: 10px;
     font-weight: 600;
 }
 
-.Signup-second-head {
-    font-weight: 500;
-    font-size: x-small;
-    margin-bottom: 10px;
-}
-
-.Signup-link {
+.Login-link {
     color: var(--primary-color);
     text-decoration: none;
     margin-left: 5px;
 }
 
-.Signup-label {
+.Login-second-head {
+    font-weight: 500;
+    font-size: x-small;
+    margin-bottom: 10px;
+}
+
+.Login-formBox {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    width: 25vw;
+    height: 420px;
+    padding-top: 50px;
+}
+
+.Login-input-container {
+    display: flex;
+    flex-direction: column;
+}
+
+.Login-label {
     color: var(--box-shadow-color);
     font-size: x-small;
     margin-bottom: 5px;
 }
 
-.Signup-input {
+.Login-input {
     padding: 10px;
     border-radius: 0;
     border: .5px solid var(--box-shadow-color);
@@ -71,16 +71,16 @@
     box-sizing: border-box;         /* Opera/IE 8+ */
 }
 
-.Signup-input-container {
+.Login-input-container {
     display: flex;
     flex-direction: column;
 }
 
-.Signup-input-container:focus-within .Signup-label {
+.Login-input-container:focus-within .Login-label {
     color:  var(--primary-color);
 }
 
-.Signup-input:focus {
+.Login-input:focus {
     outline: none;
     border: none;
     border: .5px solid  var(--primary-color);
@@ -89,13 +89,44 @@
     color: var(--primary-color);
 }
 
+.Login-password-options {
+    display: flex;
+    font-size: x-small;
+    margin-top: -20px;
+    width: 20vw;
+}
 
-.Signup-button-container {
+.Login-password-remember {
+    margin-right: auto;
+    float: left;
+}
+
+.Login-password-switch {
+    display: flex;
+    align-items: center;
+}
+
+.checkbox {
+    width: 10px;
+    height: 10px;
+    border-radius: 50px;
+}
+
+.Login-password-forgot {
+    margin-left: auto;
+    float: right;
+}
+
+.Login-button-container {
     display: flex;
     margin: 0 auto;
 }
 
-.Signup-button {
+.Login-password-forgot-link {
+    text-decoration: none;
+}
+
+.Login-button {
     width: 20vw;
     height: 35px;
     border-radius: 0;
@@ -107,7 +138,7 @@
     margin-top: 20px;
 }
 
-.Signup-button-after-validation {
+.Login-button-after-validation {
     width: 20vw;
     height: 35px;
     border-radius: 0;
@@ -117,22 +148,4 @@
     font-weight: 600;
     padding: 5px;
     margin-top: 20px;
-}
-
-.Signup-username-warning, .Signup-email-warning, .Signup-password-warning {
-    margin-top: -17px;
-    font-size: 10px;
-    margin-bottom: 10px;
-    color: red;
-    width: 20vw;
-}
-
-.Signup-password-warning {
-    margin-top: 10px;
-}
-
-.Signup-password-show {
-    width: fit-content;
-    margin-left: 17.5vw;
-    margin-top: -45px;
 }

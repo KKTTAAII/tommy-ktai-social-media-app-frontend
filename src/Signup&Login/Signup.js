@@ -4,7 +4,7 @@ import moment from "moment";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import {
-  toggleSignupButtonClasses,
+  toggleButtonClasses,
   validateSignupForm,
 } from "../helpers/helpers";
 import "../css/Signup.css";
@@ -42,7 +42,7 @@ const Signup = () => {
     const button = document.querySelector("button");
     const inputArray = Array.from(inputs);
     const isAllFilled = inputArray.every(item => item.value !== "");
-    toggleSignupButtonClasses(isAllFilled, button);
+    toggleButtonClasses(isAllFilled, button, "Signup");
 
     //validate the input
     const usernameWarning = document.querySelector(".Signup-username-warning");
@@ -83,8 +83,8 @@ const Signup = () => {
         <div className="Signup-formBox">
           <div className="Signup-head">Sign up</div>
           <div className="Signup-second-head">
-            Already have an account?{" "}
-            <Link to={``} className="Signup-link">
+            Already have an account?
+            <Link to={`/login`} className="Signup-link">
               Sign in
             </Link>
           </div>

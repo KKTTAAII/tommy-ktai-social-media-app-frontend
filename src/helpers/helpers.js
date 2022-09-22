@@ -1,9 +1,9 @@
-const toggleSignupButtonClasses = (isFilled, element) => {
+const toggleButtonClasses = (isFilled, element, feature) => {
   if (isFilled) {
-    element.className = "Signup-button-after-validation";
+    element.className = `${feature}-button-after-validation`;
     element.removeAttribute("disabled");
   } else {
-    element.className = "Signup-button";
+    element.className = `${feature}-button`;
     element.setAttribute("disabled", "true");
   }
 };
@@ -25,4 +25,4 @@ const validateSignupForm = (name, value) => {
   }
 };
 
-export { toggleSignupButtonClasses, validateSignupForm };
+export { toggleButtonClasses, validateSignupForm };
