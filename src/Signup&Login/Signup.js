@@ -8,6 +8,7 @@ import {
   validateSignupForm,
 } from "../helpers/helpers";
 import "../css/Signup.css";
+import ImageCrossFading from "./ImageCrossFading";
 
 const INITIAL_STATE = {
   username: "",
@@ -62,7 +63,6 @@ const Signup = () => {
 
   const handleSubmit = e => {
     e.preventDefault();
-    console.log("click");
     formData.joined_date = currentDate;
     setFormData(INITIAL_STATE);
 
@@ -77,6 +77,9 @@ const Signup = () => {
   return (
     <div className="Signup-main-container">
       <div className="Signup-container">
+        <div className="Signup-decorationBox">
+          <ImageCrossFading />
+        </div>
         <div className="Signup-formBox">
           <div className="Signup-head">Sign up</div>
           <div className="Signup-second-head">
@@ -136,7 +139,10 @@ const Signup = () => {
                 onChange={handleChange}
                 required
               ></input>
-              <div onClick={handleClickShowPassword} className="Signup-password-show">
+              <div
+                onClick={handleClickShowPassword}
+                className="Signup-password-show"
+              >
                 {showPassword ? (
                   <FontAwesomeIcon icon={faEye} />
                 ) : (

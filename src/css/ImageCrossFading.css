@@ -1,0 +1,62 @@
+.Image-container {
+    position:relative;
+    height:281px;
+    width:450px;
+    margin:0 auto;
+  }
+  
+.Image-container img {
+    position:absolute;
+    left:0;
+    -webkit-transition: opacity 1s ease-in-out;
+    -moz-transition: opacity 1s ease-in-out;
+    -o-transition: opacity 1s ease-in-out;
+    transition: opacity 1s ease-in-out;
+  }
+  
+img {
+    width: 27vw;
+    height: 420px;
+}
+
+@keyframes cf3FadeInOut {
+    0% {
+        opacity:1;
+      }
+    30% {
+        opacity:1;
+        }
+    60% {
+        opacity:0;
+        }
+    100% {
+        opacity:0;
+        }
+}
+  
+.PIC3 {
+    animation-name: cf3FadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 5s;
+    animation-direction: alternate;
+}
+
+.PIC2 {
+    animation-name: cf3FadeInOut;
+    animation-timing-function: ease-in-out;
+    animation-iteration-count: infinite;
+    animation-duration: 10s;
+    animation-direction: alternate;
+}
+
+.Image-container img:nth-of-type(1) {
+    animation-delay: 6s;
+  }
+.Image-container img:nth-of-type(2) {
+    animation-delay: 4s;
+  }
+.Image-container img:nth-of-type(3) {
+    animation-delay: 2s;
+  }
+
