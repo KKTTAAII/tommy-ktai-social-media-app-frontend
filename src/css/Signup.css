@@ -34,14 +34,14 @@
 }
 
 .Signup-head {
-    font-size: .9em;
+    font-size: 1.5em;
     margin-bottom: 10px;
     font-weight: 600;
 }
 
 .Signup-second-head {
     font-weight: 500;
-    font-size: x-small;
+    font-size: small;
     margin-bottom: 10px;
 }
 
@@ -53,7 +53,7 @@
 
 .Signup-label {
     color: var(--box-shadow-color);
-    font-size: x-small;
+    font-size: small;
     margin-bottom: 5px;
 }
 
@@ -64,7 +64,7 @@
     height: 35px;
     margin-bottom: 20px;
     width:  20vw;
-    font-size: .7em;
+    font-size: .8em;
     box-shadow: .1px .1px .8px .2px var(--box-shadow-color);
     -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
     -moz-box-sizing: border-box;    /* Firefox, other Gecko */
@@ -134,5 +134,124 @@
 .Signup-password-show {
     width: fit-content;
     margin-left: 17.5vw;
-    margin-top: -45px;
+    margin-top: -49px;
+}
+
+/* responsive-design */
+
+/* Smartphones (portrait and landscape) ----------- */
+@media only screen
+and (min-device-width : 320px)
+and (max-device-width : 480px) {
+/* Styles */
+    .Signup-main-container{
+        justify-content: center;
+    }
+    .Signup-container {
+        display: flex;
+        flex-direction: column;
+        width: 80vw;
+        align-items: center;
+    }
+    .Signup-decorationBox {
+        display: none;
+    }
+    .Signup-formBox {
+        margin-top: 0;
+        width: 80vw;
+        padding: 0;
+    }
+    .Signup-head {
+        font-size: 2em;
+    }
+    .Signup-second-head {
+        font-size: 1em;
+    }
+    .Signup-form {
+        width: 80vw;
+    }
+    .Signup-input-container, .Signup-password-options, .Signup-button-container {
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    .Signup-label {
+        font-size: .9em;
+    }
+    .Signup-input {
+        width: 80vw;
+    }
+    .Signup-password-options {
+        display: flex;
+        width: 80vw;
+        justify-content: space-between;
+    }
+    .Signup-password-show {
+        margin-left: 250px;
+    }
+    .Signup-password-warning, .Signup-username-warning {
+        width: 80vw;
+    }
+    .Signup-button {
+        width: 80vw;
+    }
+}
+
+/*Ipad -----------*/
+@media only screen 
+and (min-device-width : 750px)
+and (max-device-width : 850px) {
+    .Signup-container {
+        display: flex;
+        flex-direction: column;
+        width: 80vw;
+        align-items: center;
+    }
+    .Signup-decorationBox {
+        margin-top: 30vh;
+        width: 400px;
+    }
+    img, .Image-container {
+        width: 400px;
+    }
+    .Signup-formBox {
+        margin-top: 20px;
+        width: 80vw;
+        padding: 0;
+    }
+    .Signup-head {
+        font-size: 2em;
+    }
+    .Signup-second-head {
+        font-size: 1.2em;
+    }
+    .Signup-form {
+        width: 80vw;
+    }
+    .Signup-input-container, .Signup-password-options, .Signup-button-container {
+        align-items: center;
+        text-align: center;
+        justify-content: center;
+        margin: 0 auto;
+    }
+    .Signup-label {
+        font-size: 1.2em;
+    }
+    .Signup-input {
+        height: 5vh;
+        width: 80vw;
+        font-size: 1.2em;
+    }
+    .Signup-password-options {
+        display: flex;
+        width: 80vw;
+        justify-content: space-between;
+        font-size: 1em;
+    }
+    .Signup-button {
+        width: 80vw;
+        font-size: 1.2em;
+        height: 5vh;
+    }
 }

@@ -43,7 +43,7 @@ const Login = () => {
               Sign up
             </Link>
           </div>
-          <form>
+          <form className="Login-form">
             <div className="Login-input-container">
               <label htmlFor="email" className="Login-label">
                 Email
