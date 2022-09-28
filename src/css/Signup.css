@@ -7,16 +7,17 @@
     display: flex;
     align-items: center;
     justify-content: center;
-    height: 700px;
+    height: 100vh;
 }
 
 .Signup-container {
+    width: 100vw;
     display: flex;
 }
 
 .Signup-decorationBox {
-    width: 27vw;
-    height: 420px;
+    width: 50vw;
+    height: 100vh;
 }
 
 .Signup-form {
@@ -28,9 +29,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 25vw;
-    height: 420px;
-    padding-top: 40px;
+    width: 50vw;
+    height: 100vh;
+    justify-content: center;
 }
 
 .Signup-head {
@@ -196,6 +197,9 @@ and (max-device-width : 480px) {
     .Signup-button {
         width: 80vw;
     }
+    .Signup-button-container {
+        margin: 0 auto;
+    }
 }
 
 /*Ipad -----------*/
@@ -209,8 +213,7 @@ and (max-device-width : 850px) {
         align-items: center;
     }
     .Signup-decorationBox {
-        margin-top: 30vh;
-        width: 400px;
+        display: none;
     }
     img, .Image-container {
         width: 400px;

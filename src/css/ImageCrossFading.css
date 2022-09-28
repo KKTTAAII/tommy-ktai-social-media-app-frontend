@@ -1,7 +1,7 @@
 .Image-container {
     position: relative;
-    height: 420px;
-    width: 27vw;
+    height: 100vh;
+    width: 50vw;
     margin:0 auto;
   }
   
@@ -15,8 +15,8 @@
   }
   
 img {
-    width: 27vw;
-    height: 420px;
+    width: 50vw;
+    height: 100vh;
 }
 
 @keyframes cf3FadeInOut {

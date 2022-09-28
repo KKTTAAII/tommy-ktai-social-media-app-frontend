@@ -5,18 +5,17 @@
 
 .Login-main-container {
     display: flex;
-    align-items: center;
-    justify-content: center;
-    height: 700px;
+    height: 100vh;
 }
 
 .Login-container {
+    width: 100vw;
     display: flex;
 }
 
 .Login-decorationBox {
-    width: 27vw;
-    height: 420px;
+    width: 50vw;
+    height: 100vh;
 }
 
 .Login-head {
@@ -41,9 +40,9 @@
     display: flex;
     flex-direction: column;
     align-items: center;
-    width: 25vw;
-    height: 420px;
-    padding-top: 60px;
+    width: 50vw;
+    height: 100vh;
+    justify-content: center;
 }
 
 .Login-input-container {
@@ -157,6 +156,9 @@
 and (min-device-width : 320px)
 and (max-device-width : 480px) {
 /* Styles */
+    .Login-main-container{
+        justify-content: center;
+    }
     .Login-container {
         display: flex;
         flex-direction: column;
@@ -206,15 +208,18 @@ and (max-device-width : 480px) {
 @media only screen 
 and (min-device-width : 750px)
 and (max-device-width : 850px) {
+    .Login-main-container {
+        width: 100vw;
+        height: 100vh;
+    }
     .Login-container {
         display: flex;
         flex-direction: column;
-        width: 80vw;
+        width: 100vw;
         align-items: center;
     }
     .Login-decorationBox {
-        margin-top: 30vh;
-        width: 400px;
+        display: none;
     }
     img, .Image-container {
         width: 400px;
