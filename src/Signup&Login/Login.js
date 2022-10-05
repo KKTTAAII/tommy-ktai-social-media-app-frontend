@@ -25,8 +25,19 @@ const Login = () => {
     const button = document.querySelector("button");
     const inputArray = Array.from(inputs);
     const isAllFilled = inputArray.every(item => item.value !== "");
-    toggleButtonClasses(isAllFilled, button, "Login");
+    toggleButtonClasses(isAllFilled, true, button, "Login");
     isAllFilled ? setIsInvalid(false) : setIsInvalid(true);
+  };
+
+  const handleSubmit = e => {
+    e.preventDefault();
+    setFormData(INITIAL_STATE);
+
+    if (!isInvalid) {
+      //.....function to interact with backend route
+    } else {
+      //error handling
+    }
   };
 
   return (
@@ -43,7 +54,7 @@ const Login = () => {
               Sign up
             </Link>
           </div>
-          <form className="Login-form">
+          <form className="Login-form" onSubmit={handleSubmit}>
             <div className="Login-input-container">
               <label htmlFor="email" className="Login-label">
                 Email
@@ -87,7 +98,9 @@ const Login = () => {
                 </label>
               </div>
               <div className="Login-password-forgot">
-                <Link className="Login-password-forgot-link">Forgot Password?</Link>
+                <Link className="Login-password-forgot-link">
+                  Forgot Password?
+                </Link>
               </div>
             </div>
 

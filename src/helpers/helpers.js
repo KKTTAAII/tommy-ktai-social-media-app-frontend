@@ -1,5 +1,8 @@
-const toggleButtonClasses = (isFilled, element, feature) => {
-  if (isFilled) {
+//enable/disable sign up button after checking that all fields are filled and no errors
+const toggleButtonClasses = (isFilled, isNoWarning, element, feature) => {
+  console.log(isFilled)
+  console.log(isNoWarning)
+  if (isFilled && isNoWarning) {
     element.className = `${feature}-button-after-validation`;
     element.removeAttribute("disabled");
   } else {
@@ -8,9 +11,10 @@ const toggleButtonClasses = (isFilled, element, feature) => {
   }
 };
 
+//form validation
 const validateSignupForm = (name, value) => {
-  const specialChars = /[`!@#$%^&*()_+\-=\[\]{};':"\\|,.<>\/?~]/;
-  if (name === "username") {
+  const specialChars = /[`!@#$%^&*()_+\-=[\]{};':"\\|,.<>?~]/;
+  if (name === "name") {
     const isValidUsername = value.length >= 3 && value.length <= 15;
     return isValidUsername ? "" : "username must be between 3-15 characters";
   } else if (name === "email") {
@@ -25,4 +29,10 @@ const validateSignupForm = (name, value) => {
   }
 };
 
-export { toggleButtonClasses, validateSignupForm };
+//check is there is any warning shown
+const checkWarning = warnings => {
+  const result = warnings.every(warning => warning.innerText === "");
+  return result;
+};
+
+export { toggleButtonClasses, validateSignupForm, checkWarning };

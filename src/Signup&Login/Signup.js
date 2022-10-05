@@ -6,12 +6,13 @@ import { faEye, faEyeSlash } from "@fortawesome/free-solid-svg-icons";
 import {
   toggleButtonClasses,
   validateSignupForm,
+  checkWarning,
 } from "../helpers/helpers";
 import "../css/Signup.css";
 import ImageCrossFading from "./ImageCrossFading";
 
 const INITIAL_STATE = {
-  username: "",
+  name: "",
   password: "",
   email: "",
   profile_picture: "",
@@ -27,7 +28,6 @@ const Signup = () => {
 
   const handleClickShowPassword = () => {
     setShowPassword(!showPassword);
-    console.log("hello");
   };
 
   const handleChange = e => {
@@ -42,23 +42,27 @@ const Signup = () => {
     const button = document.querySelector("button");
     const inputArray = Array.from(inputs);
     const isAllFilled = inputArray.every(item => item.value !== "");
-    toggleButtonClasses(isAllFilled, button, "Signup");
 
     //validate the input
-    const usernameWarning = document.querySelector(".Signup-username-warning");
+    const nameWarning = document.querySelector(".Signup-name-warning");
     const emailWarning = document.querySelector(".Signup-email-warning");
     const passwordWarning = document.querySelector(".Signup-password-warning");
 
     isAllFilled ? setIsInvalid(false) : setIsInvalid(true);
     const warning = validateSignupForm(name, value);
 
-    if (name === "username") {
-      usernameWarning.innerText = warning;
+    if (name === "name") {
+      nameWarning.innerText = warning;
     } else if (name === "email") {
       emailWarning.innerText = warning;
     } else {
       passwordWarning.innerText = warning;
     }
+
+    //ensure no warnings before enabling the sign up button
+    const allWarnings = [nameWarning, emailWarning, passwordWarning];
+    const isNoWarning = checkWarning(allWarnings);
+    toggleButtonClasses(isAllFilled, isNoWarning, button, "Signup");
   };
 
   const handleSubmit = e => {
@@ -68,9 +72,8 @@ const Signup = () => {
 
     if (!isInvalid) {
       //.....function to interact with backend route
-    } else {
-      const warningElement = document.querySelector("#Signup-hiddenWarning");
-      warningElement.classList.toggle("Signup-hiddenWarning");
+    }else{
+      //error handling
     }
   };
 
@@ -90,21 +93,20 @@ const Signup = () => {
           </div>
           <form className="Signup-form" onSubmit={handleSubmit}>
             <div className="Signup-input-container">
-              <label htmlFor="username" className="Signup-label">
-                Username
+              <label htmlFor="name" className="Signup-label">
+                Name
               </label>
               <input
                 className="Signup-input"
-                type="username"
-                id="username"
-                name="username"
-                autoComplete="username"
-                value={formData.username}
+                type="name"
+                id="name"
+                name="name"
+                autoComplete="name"
+                value={formData.name}
                 placeholder="helloWorld"
                 onChange={handleChange}
-                required
               ></input>
-              <small className="Signup-username-warning"></small>
+              <small className="Signup-name-warning"></small>
             </div>
 
             <div className="Signup-input-container">
@@ -119,7 +121,6 @@ const Signup = () => {
                 value={formData.email}
                 placeholder="user@user.com"
                 onChange={handleChange}
-                required
               ></input>
               <small className="Signup-email-warning"></small>
             </div>
@@ -137,7 +138,6 @@ const Signup = () => {
                 value={formData.password}
                 placeholder="•••••••"
                 onChange={handleChange}
-                required
               ></input>
               <div
                 onClick={handleClickShowPassword}

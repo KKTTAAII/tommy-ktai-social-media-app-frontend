@@ -94,6 +94,7 @@
 .Signup-button-container {
     display: flex;
     margin: 0 auto;
+    flex-direction: column;
 }
 
 .Signup-button {
@@ -108,6 +109,10 @@
     margin-top: 20px;
 }
 
+.Signup-button:hover {
+    cursor: pointer;
+}
+
 .Signup-button-after-validation {
     width: 20vw;
     height: 35px;
@@ -120,7 +125,7 @@
     margin-top: 20px;
 }
 
-.Signup-username-warning, .Signup-email-warning, .Signup-password-warning {
+.Signup-name-warning, .Signup-email-warning, .Signup-password-warning {
     margin-top: -17px;
     font-size: 10px;
     margin-bottom: 10px;
