@@ -1,7 +1,5 @@
 //enable/disable sign up button after checking that all fields are filled and no errors
 const toggleButtonClasses = (isFilled, isNoWarning, element, feature) => {
-  console.log(isFilled)
-  console.log(isNoWarning)
   if (isFilled && isNoWarning) {
     element.className = `${feature}-button-after-validation`;
     element.removeAttribute("disabled");

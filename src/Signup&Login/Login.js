@@ -92,13 +92,16 @@ const Login = () => {
 
             <div className="Login-password-options">
               <div className="Login-password-remember">
-                <label class="Login-password-switch">
+                <label className="Login-password-switch">
                   <input type="checkbox" className="checkbox"></input>
                   Remember me?
                 </label>
               </div>
               <div className="Login-password-forgot">
-                <Link className="Login-password-forgot-link">
+                <Link
+                  className="Login-password-forgot-link"
+                  to={`/forgotpassword`}
+                >
                   Forgot Password?
                 </Link>
               </div>

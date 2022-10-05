@@ -72,6 +72,7 @@ const Signup = () => {
 
     if (!isInvalid) {
       //.....function to interact with backend route
+      //will have to show an element saying that an email to activate account has been sent
     }else{
       //error handling
     }
